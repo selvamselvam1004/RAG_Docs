@@ -10,6 +10,7 @@ class PDFApp:
 
         """
         self.filePath = filePath
+        print(self.filePath)
         self.fileFormatValStatus = self.fileFormatCheck(self.filePath)
         self.text = self.extractText(self.filePath,self.fileFormatValStatus)
         self.model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
